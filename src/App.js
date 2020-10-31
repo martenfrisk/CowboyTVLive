@@ -13,18 +13,18 @@ export default function App() {
 
 	return (
 		<div className="container">
-			<div className="flex items-center justify-center w-screen h-screen">
+			<div className="flex items-center justify-center pt-16 w-screen h-screen">
 				<div
-					className="absolute flex flex-col items-center top-0 z-30 mt-10 font-hairline text-white"
+					className="absolute flex flex-col items-center top-0 z-30 mt-0 md:mt-10 font-hairline text-white"
 					style={{ fontFamily: 'Amatic SC, cursive' }}
 				>
-					<p className="text-5xl tracking-wide text-center border-b border-white">
+					<p className="text-4xl md:text-5xl tracking-wide text-center border-b border-white">
 						It's not TV, it's <span className="font-semibold">Cowboy TV</span>
 					</p>
-					<p className="pt-2 font-serif text-xl italic tracking-widest text-center">
+					<p className="md:pt-2 pt-1 font-serif text-sm md:text-xl italic tracking-widest text-center">
 						Enjoy the smooth and drama of Cowboy TV
 					</p>
-          <button onClick={() => setShuffle(!shuffle)} className="text-2xl focus:outline-none mt-4 tracking-wide">{shuffle ? 'Disable' : 'Enable'} shuffle</button>
+          <button onClick={() => setShuffle(!shuffle)} className="text-lg md:text-2xl focus:outline-none mt-0 md:mt-4 tracking-wide">{shuffle ? 'Disable' : 'Enable'} shuffle</button>
 				</div>
         {!turnOn && 
 				<div className="absolute z-40 mx-auto w-full md:w-1/2 text-5xl text-center py-40 italic font-serif bg-white bg-opacity-50 cursor-pointer rounded-lg" style={{backdropFilter: 'blur(20px)',  fontFamily: 'Amatic SC, cursive'}} onClick={() => setTurnOn(true)}>Click to watch Cowboy TV</div>}
