@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './styles/tailwind.css'
 import './styles/crt.css'
 import ReactHowler from 'react-howler'
+import WebFont from 'webfontloader'
+
 
 export default function App() {
 	const audiofiles = [ '1-1', '1-2', '1-3', '1-4', '2-1', '2-2', '2-3' ]
@@ -11,6 +13,12 @@ export default function App() {
 	const [ trackNumber, setTrackNumber ] = useState(reset)
   const [ shuffle, setShuffle ] = useState(false)
   const [ turnOn, setTurnOn ] = useState(false)
+
+	WebFont.load({
+		google: {
+			families: ['Amatic SC:400,700', 'cursive']
+		}
+	})
 
 	return (
 		<div className="container">
@@ -29,10 +37,11 @@ export default function App() {
 				</div>
         {!turnOn && 
 				<div className="absolute z-40 mx-auto w-full md:w-1/2 text-5xl text-center py-40 italic font-serif bg-white bg-opacity-50 cursor-pointer rounded-lg" style={{backdropFilter: 'blur(20px)',  fontFamily: 'Amatic SC, cursive'}} onClick={() => setTurnOn(true)}>Click to watch Cowboy TV</div>}
+				
 				<img
+					style={{ width: 'auto', height: '100%', minWidth: '300px' }}
 					src="/cowboytvtv3.png"
 					className="z-20 object-none mx-auto shadow-inner"
-					style={{ width: 'auto', height: '100%', minWidth: '300px' }}
 					alt=""
 				/>
 				<div
@@ -46,8 +55,8 @@ export default function App() {
 					}}
 				>
 					<img
-						className="absolute z-0 w-full h-full"
-						src="/campfire.gif"
+					src="/campfire.gif"
+						className="absolute z-10 w-full h-full"
 						style={{ transform: 'translateY(-5%)' }}
 						alt=""
 					/>
