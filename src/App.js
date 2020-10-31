@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './styles/tailwind.css'
+import './styles/crt.css'
 import ReactHowler from 'react-howler'
 
 export default function App() {
