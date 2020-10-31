@@ -24,7 +24,7 @@ export default function App() {
 					<p className="pt-2 font-serif text-xl italic tracking-widest text-center">
 						Enjoy the smooth and drama of Cowboy TV
 					</p>
-          <button onClick={() => setShuffle(!shuffle)} className="text-2xl focus:outline-none mt-4 tracking-wide">Shuffle {shuffle ? 'off' : 'on'}</button>
+          <button onClick={() => setShuffle(!shuffle)} className="text-2xl focus:outline-none mt-4 tracking-wide">{shuffle ? 'Disable' : 'Enable'} shuffle</button>
 				</div>
         {!turnOn && 
 				<div className="absolute z-40 mx-auto w-full md:w-1/2 text-5xl text-center py-40 italic font-serif bg-white bg-opacity-50 cursor-pointer rounded-lg" style={{backdropFilter: 'blur(20px)',  fontFamily: 'Amatic SC, cursive'}} onClick={() => setTurnOn(true)}>Click to watch Cowboy TV</div>}
